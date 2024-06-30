@@ -116,4 +116,5 @@ After you have published your sources on GitHub, create a file named .github/wor
    git checkout main
 
 7. 接下来在 main 分支上进行了任何修改，commit 后 push 到远程，main所做的修改就会自动生成 HTML 文档并存放到远程的 gh-pages 分支。
+8. 现在进入项目的设置页面，就可以看到: ``Your site is live at https://hustnzj.github.io/sphinx_learning/``
 
