@@ -96,7 +96,24 @@ After you have published your sources on GitHub, create a file named .github/wor
    
    furo==2024.5.6
 
+6. 创建一个干净的 gh-pages 分支并推送到远程。此分支专门用来存放推送 main 分支时自动生成的 HTML 文档，命令如下：
 
+.. code-block:: bash
 
+   # 创建一个新的孤立分支 gh-pages
+   git checkout --orphan gh-pages
+ 
+   # 删除所有文件（清空 gh-pages 分支）
+   git rm -rf .
+ 
+   # 创建一个空提交，初始化 gh-pages 分支
+   git commit --allow-empty -m "Initializing gh-pages branch"
+ 
+   # 将 gh-pages 分支推送到远程仓库
+   git push origin gh-pages
+ 
+   # 切换回 main 分支
+   git checkout main
 
+7. 接下来在 main 分支上进行了任何修改，commit 后 push 到远程，main所做的修改就会自动生成 HTML 文档并存放到远程的 gh-pages 分支。
 
